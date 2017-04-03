@@ -31,9 +31,9 @@ var corsOptions = {
 
 var bodyParser = require('body-parser');
 
-app.get('/', cors(corsOptions), function (req, res)
-  	res.send('Hello World');
-})
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
 
 app.post('/book', cors(corsOptions), function (req, res) {
 		ticketid = "l"
